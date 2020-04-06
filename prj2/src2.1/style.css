@@ -1,0 +1,37 @@
+table thead {
+    background-color: #ffc;
+    font-size: 40pt;
+    font-family: "楷体_GB2312", "华文琥珀", "华文行楷";
+    color: red;
+}
+
+table tbody,
+table tfoot {
+    font-size: 9px;
+}
+
+.navbar {
+    background-color: #3cf;
+}
+
+.sidenav-title {
+    background-color: #ffc;
+    border-top: 2px solid #fc0;
+    border-right: 1px dotted #03f;
+}
+
+.sidenav-content {
+    background-color: #fcf;
+    border-right: 1px dotted #03f;
+}
+
+.footer {
+    background-color: #9cf;
+    border-top: 3px double;
+}
+
+.content-main {
+    background-color: #ffc;
+    border: 1px solid;
+    vertical-align: top;
+}

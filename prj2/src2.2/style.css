@@ -1,0 +1,113 @@
+#sidenav {
+    float: left;
+    width: 20%;
+    height: 400px;
+}
+
+ul {
+    background-repeat: no-repeat;
+}
+
+#left-himawari {
+    background-image: url(images/HUA.GIF);
+    width: 189px;
+    height: 181px;
+    margin: 0px;
+}
+
+#sidenav ul[id^='bar-'] {
+    width: 128px;
+    height: 34px;
+    margin: 5px 0px;
+}
+
+#bar-1 {
+    background-image: url(images/IMGBAR1.jpg);
+}
+
+#bar-2 {
+    background-image: url(images/IMGBAR0.JPG);
+}
+
+#bar-3 {
+    background-image: url(images/IMGBAR2.JPG);
+}
+
+#bar-4 {
+    background-image: url(images/IMGBAR3.JPG);
+}
+
+#bar-5 {
+    background-image: url(images/IMGBAR4.JPG);
+}
+
+#angel {
+    background-image: url(images/FACE.GIF);
+    width: 96px;
+    height: 80px;
+    margin: 5px 0px;
+}
+
+#main-content {
+    float: left;
+    width: 80%;
+    height: 400px;
+}
+
+#title {
+    background-image: url(images/TAITOU.GIF);
+    width: 511px;
+    height: 85px;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+}
+
+#self-intro {
+    height: 30%;
+    width: 100%;
+}
+
+#intro-img {
+    float: left;
+    margin: 2% 1%; 
+    background-image: url(images/sunwukong.jpg);
+    background-size: 153px 100px;
+    background-repeat: no-repeat;
+    width: 153px;
+    height: 100px;
+}
+
+#intro-text {
+    font-size: 16px;
+}
+
+#poem {
+    padding-top: 4%;
+    width: 100%;
+    height: 35%;
+}
+
+#poem-content {
+    padding-left: 8%;
+    padding-right: 7%;
+    line-height: 28px;
+    float: left;
+}
+
+#poem-pic {
+    padding-top: 5%;
+    background-image: url(images/HUDIE.GIF);
+    background-repeat: no-repeat;
+    width: 104px;
+    height: 79px;
+    margin-left: 48%;
+    margin-top: 3%;
+}
+
+#footer {
+    padding-top: 2%;
+    background-image: url(images/BANNER.GIF);
+    width: 468px;
+    height: 60px;
+    background-repeat: no-repeat;
+}
