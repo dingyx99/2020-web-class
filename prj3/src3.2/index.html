@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="Javascript练习5">
+    <title>JS练习5</title>
+    <style>
+        .answers {
+            font-family: Courier, 'Courier New', Consolas;
+        }
+    </style>
+</head>
+
+<body onload="find();">
+    <h3>找出1000 ~ 9999之间能够被17和13同时整除的整数、个数、累加和</h3>
+    <div class="answers" id="answer"></div>
+</body>
+<script>
+    function find() {
+        var sum = 0,
+            tot = 0,
+            flag = 0;
+        document.getElementById("answer").innerHTML += "<p>整数包括：</p>"
+        for (var i = 1000; i <= 9999; i++) {
+            if (i % 17 == 0 && i % 13 == 0) {
+                flag++;
+                sum++;
+                tot += i;
+                document.getElementById("answer").innerHTML += (i + " ");
+                if (flag == 10) {
+                    document.getElementById("answer").innerHTML += "</br>";
+                    flag = 0;
+                }
+            }
+        }
+        document.getElementById("answer").innerHTML += ("</br>" + "<p>个数为：" + sum + "</p>" + "<p>累加和为：" + tot + "</p>");
+    }
+</script>
+
+</html>

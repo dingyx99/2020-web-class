@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="Javascript练习11">
+    <title>JS练习11</title>
+    <style>
+        #ul_imgs {
+            width: 5000px;
+            padding: 0px;
+            margin: 0px;
+            transition: all 1.5s;
+        }
+
+        .li_img {
+            width: 500px;
+            float: left;
+            list-style: none;
+        }
+
+        img {
+            width: 500px;
+        }
+
+        .main {
+            width: 500px;
+            overflow: hidden;
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>练习11</h2>
+    <p>使用jQuery+js实现，图片来源：<a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+    <div class="main">
+        <ul id="ul_imgs">
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560a2rfxj31900u0wwk.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560gzlc0j318g0u0b29.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560nxhgfj31900u0e81.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560ru8yij31900u04ll.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge561hrh6bj31900u0kjp.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5623t7v6j31900u0u10.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge562913o4j31900u04qp.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5632wvazj31d40u0npj.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge56369w06j31hc0u0qmt.jpg"></li>
+            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5638mmmij317q0u0gwm.jpg"></li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        var len = $(".li_img").length;
+        $("#ul_imgs").width($(".li_img").eq(0).width() * len);
+        var id,
+            index = 0;
+        id = setInterval(start, 3000);
+
+        function start() {
+            index++;
+            $("#ul_imgs").animate({
+                'left': -$(".li_img").eq(0).width() * (index % len)
+            });
+            if (index % len == (len - 1)) {
+                $("#ul_imgs").animate({
+                    'left': 0
+                }, 0);
+                index++;
+            }
+        }
+    });
+</script>
+
+</html>

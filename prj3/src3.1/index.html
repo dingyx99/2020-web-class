@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="Javascript练习集合">
+    <title>JS练习集合</title>
+    <style>
+        .answers {
+            font-family: Courier, 'Courier New', Consolas;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript练习</h1>
+    <div id="ex1">
+        <h2>练习1</h2>
+        <form>
+            <input type="button" onclick="multipleTable();" value="运行">
+            <input type="reset" onclick="document.getElementById('answer1').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer1" class="answers"></span>
+    </div>
+    <div class="ex2">
+        <h2>练习2</h2>
+        <form>
+            <input type="number" id="ex2-input" required autocomplete="off" placeholder="请输入数字">
+            </br>
+            <input type="button" onclick="isPrime();" value="运行">
+            <input type="reset" onclick="document.getElementById('answer2').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer2" class="answers"></span>
+    </div>
+    <div id="ex3">
+        <h2>练习3</h2>
+        <form>
+            <input type="text" id="ex3-str1" required autocomplete="off" placeholder="请输入第一个字符串">
+            </br>
+            <input type="text" id="ex3-str2" required autocomplete="off" placeholder="请输入第二个字符串">
+            </br>
+            <input type="button" onclick="isAnagram();" value="运行">
+            <input type="reset" onclick="document.getElementById('answer3').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer3" class="answers"></span>
+    </div>
+    <div id="ex4">
+        <h2>练习4</h2>
+        <form>
+            <input type="text" id="ex4-input" required autocomplete="off" placeholder="请输入字符串">
+            </br>
+            <input type="button" onclick="isPalindrome();" value="运行">
+            <input type="reset" onclick="document.getElementById('answer4').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer4" class="answers"></span>
+    </div>
+    <div id="ex6">
+        <h2>练习6</h2>
+        <form>
+            <input type="button" onclick="getDate();" value="运行">
+            <input type="reset" onclick="document.getElementById('answer6').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer6" class="answers"></span>
+    </div>
+    <div id="ex7">
+        <h2>练习7</h2>
+        <form>
+            <input type="text" id="ex7-input" required autocomplete="off" placeholder="请输入字符串">
+            </br>
+            <input type="button" onclick="arrayAttrib();" value="运行">
+            <input type="reset" onclick="document.getElementById('answer7').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer7" class="answers"></span>
+    </div>
+    <div id="ex8">
+        <h2>练习8</h2>
+        <form>
+            <input type="number" id="ex8-input" required autocomplete="off" placeholder="请输入年份">
+            </br>
+            <input type="button" onclick="testLeapYear();" value="判断">
+            <input type="reset" onclick="document.getElementById('answer8').innerHTML='';">
+        </form>
+        </br>
+        <span id="answer8" class="answers"></span>
+    </div>
+    <div id="ex9">
+        <h2>练习9</h2>
+        <form method="POST" onsubmit="return checkInput();">
+            <tag for="ex9-input">姓名</tag>
+            <input type="text" id="ex9-input" autocomplete="username" placeholder="请输入姓名">
+            </br>
+            <input type="submit" value="注册">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
