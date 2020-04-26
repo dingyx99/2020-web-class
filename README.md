@@ -14,4 +14,6 @@ To get source, use `view-source` instead.
     * [Class-Div Page](prj2/src2.2/index.html)
     * [Custom CSS Page(HTML is given)](prj2/src2.3/index.html)
     * [CSS Animation](prj2/src2.4/index.html)
+* Homework 3
+    * [JavaScript Exercise(Bundle)](prj3/src3.1/index.html)
 

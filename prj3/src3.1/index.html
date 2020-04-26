@@ -10,13 +10,24 @@
         .answers {
             font-family: Courier, 'Courier New', Consolas;
         }
+
+        .info {
+            color: gray;
+            font-family: Courier, 'Courier New', Consolas;
+            font-size: 14px;
+        }
+        .ex-area {
+            float: left;
+            width: 500px;
+        }
     </style>
 </head>
 
 <body>
     <h1>JavaScript练习</h1>
-    <div id="ex1">
+    <div id="ex1" class="ex-area">
         <h2>练习1</h2>
+        <span class="info">编写JavaScript程序实现输出“九九乘法表”（左下三角形形式）。</span>
         <form>
             <input type="button" onclick="multipleTable();" value="运行">
             <input type="reset" onclick="document.getElementById('answer1').innerHTML='';">
@@ -24,8 +35,9 @@
         </br>
         <span id="answer1" class="answers"></span>
     </div>
-    <div class="ex2">
+    <div id="ex2" class="ex-area">
         <h2>练习2</h2>
+        <span class="info">编写JavaScript程序，测试输入的数是否是素数。</span>
         <form>
             <input type="number" id="ex2-input" required autocomplete="off" placeholder="请输入数字">
             </br>
@@ -35,8 +47,9 @@
         </br>
         <span id="answer2" class="answers"></span>
     </div>
-    <div id="ex3">
+    <div id="ex3" class="ex-area">
         <h2>练习3</h2>
+        <span class="info">编写函数isAnagram(str1,str2)用来检查两个字符串是否互为变位词。</span>
         <form>
             <input type="text" id="ex3-str1" required autocomplete="off" placeholder="请输入第一个字符串">
             </br>
@@ -48,8 +61,9 @@
         </br>
         <span id="answer3" class="answers"></span>
     </div>
-    <div id="ex4">
+    <div id="ex4" class="ex-area">
         <h2>练习4</h2>
+        <span class="info">编写函数checkPalindrome(str)判断字符串str是否为回文字符串。</span>
         <form>
             <input type="text" id="ex4-input" required autocomplete="off" placeholder="请输入字符串">
             </br>
@@ -59,8 +73,15 @@
         </br>
         <span id="answer4" class="answers"></span>
     </div>
-    <div id="ex6">
+    <div id="ex5" class="ex-area">
+        <h2>练习5</h2>
+        <span class="info">编写Javascript程序,找出符合条件的数。</span>
+        </br>
+        <span id="answer5" class="answers">见<a href="../src3.2/index.html" target="_blank">独立文件</a></span>
+    </div>
+    <div id="ex6" class="ex-area">
         <h2>练习6</h2>
+        <span class="info">利用Date对象编写程序，判断并输出今天是开学的第几周，星期几。</span>
         <form>
             <input type="button" onclick="getDate();" value="运行">
             <input type="reset" onclick="document.getElementById('answer6').innerHTML='';">
@@ -68,8 +89,9 @@
         </br>
         <span id="answer6" class="answers"></span>
     </div>
-    <div id="ex7">
+    <div id="ex7" class="ex-area">
         <h2>练习7</h2>
+        <span class="info">输入一串用英文逗号分隔的数字字符串，编写程序，输出找出该组数中的最大、最小值、和，并按从大到小排序后的输出结果（以逗号分隔）。</span>
         <form>
             <input type="text" id="ex7-input" required autocomplete="off" placeholder="请输入字符串">
             </br>
@@ -79,8 +101,9 @@
         </br>
         <span id="answer7" class="answers"></span>
     </div>
-    <div id="ex8">
+    <div id="ex8" class="ex-area">
         <h2>练习8</h2>
+        <span class="info">要求用户在文本框中年份，点击判断按钮，输出该年是否是闰年的结果。</span>
         <form>
             <input type="number" id="ex8-input" required autocomplete="off" placeholder="请输入年份">
             </br>
@@ -90,8 +113,9 @@
         </br>
         <span id="answer8" class="answers"></span>
     </div>
-    <div id="ex9">
+    <div id="ex9" class="ex-area">
         <h2>练习9</h2>
+        <span class="info">要求在文本框中输入用户名，点击“注册”按钮进行提交。当文本框为空时，则弹出提示信息，并取消提交操作。</br>注意，此处注册无实际操作。</span>
         <form method="POST" onsubmit="return checkInput();">
             <tag for="ex9-input">姓名</tag>
             <input type="text" id="ex9-input" autocomplete="username" placeholder="请输入姓名">
@@ -99,6 +123,18 @@
             <input type="submit" value="注册">
             <input type="reset">
         </form>
+    </div>
+    <div id="ex10"  class="ex-area">
+        <h2>练习10</h2>
+        <span class="info">直接使用Javascript的计时器、DOM模型操作，将当前目录下的10张图片循环显示在网页上。</span>
+        </br>
+        <span id="answer10" class="answers">见<a href="../src3.3/index.html" target="_blank">独立文件</a></span>
+    </div>
+    <div id="ex11" class="ex-area">
+        <h2>练习11</h2>
+        <span class="info">利用JQuery框架编写程序，将当前目录下的10张图片循环显示在网页上。</span>
+        </br>
+        <span id="answer10" class="answers">见<a href="../src3.4/index.html" target="_blank">独立文件</a></span>
     </div>
 </body>
 <script type="text/javascript" src="script.js"></script>

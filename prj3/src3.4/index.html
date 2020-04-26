@@ -7,29 +7,55 @@
     <meta name="description" content="Javascript练习11">
     <title>JS练习11</title>
     <style>
-        #ul_imgs {
-            width: 5000px;
-            padding: 0px;
-            margin: 0px;
-            transition: all 1.5s;
-        }
-
-        .li_img {
-            width: 500px;
-            float: left;
-            list-style: none;
-        }
-
-        img {
-            width: 500px;
-        }
-
-        .main {
-            width: 500px;
-            overflow: hidden;
+        .showbox {
             position: relative;
-            top: 50px;
-            left: 100px;
+            height: 300px;
+            width: 570px;
+            overflow: hidden;
+            border: 10px solid #eee;
+            background-color: #eee;
+            border-radius: 10px;
+        }
+
+        .imagebox {
+            position: relative;
+            height: 270px;
+            width: 570px;
+            top: 0;
+            left: 5px;
+            overflow: hidden;
+        }
+
+        .imagebox img {
+            display: block;
+            width: 570px;
+            height: 270px;
+            float: left;
+        }
+
+        .icobox {
+            position: absolute;
+            border: none;
+            width: 160px;
+            height: 12px;
+            left: 200px;
+            bottom: 10px;
+            text-align: center;
+            line-height: 40px;
+            overflow: hidden;
+        }
+
+        .icobox span {
+            background: white 0px 0px no-repeat;
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            float: left;
+            margin-left: 3px;
+        }
+
+        .icobox span.active {
+            background: gray 0px -12px no-repeat;
         }
     </style>
 </head>
@@ -37,42 +63,74 @@
 <body>
     <h2>练习11</h2>
     <p>使用jQuery+js实现，图片来源：<a href="https://unsplash.com" target="_blank">Unsplash</a></p>
-    <div class="main">
-        <ul id="ul_imgs">
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560a2rfxj31900u0wwk.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560gzlc0j318g0u0b29.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560nxhgfj31900u0e81.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560ru8yij31900u04ll.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge561hrh6bj31900u0kjp.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5623t7v6j31900u0u10.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge562913o4j31900u04qp.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5632wvazj31d40u0npj.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge56369w06j31hc0u0qmt.jpg"></li>
-            <li class="li_img"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5638mmmij317q0u0gwm.jpg"></li>
-        </ul>
+    <div class="showbox">
+        <div class="imagebox">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560a2rfxj31900u0wwk.jpg" alt="1.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560gzlc0j318g0u0b29.jpg" alt="2.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560nxhgfj31900u0e81.jpg" alt="3.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge560ru8yij31900u04ll.jpg" alt="4.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge561hrh6bj31900u0kjp.jpg" alt="5.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5623t7v6j31900u0u10.jpg" alt="6.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge562913o4j31900u04qp.jpg" alt="7.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5632wvazj31d40u0npj.jpg" alt="8.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge56369w06j31hc0u0qmt.jpg" alt="9.jpg">
+            <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge5638mmmij317q0u0gwm.jpg" alt="10.jpg">
+        </div>
+        <div class="icobox">
+            <span rel="0" class="active">0</span>
+            <span rel="1">1</span>
+            <span rel="2">2</span>
+            <span rel="3">3</span>
+            <span rel="4">4</span>
+            <span rel="5">5</span>
+            <span rel="6">6</span>
+            <span rel="7">7</span>
+            <span rel="8">8</span>
+            <span rel="9">9</span>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
 <script>
-    $(function () {
-        var len = $(".li_img").length;
-        $("#ul_imgs").width($(".li_img").eq(0).width() * len);
-        var id,
-            index = 0;
-        id = setInterval(start, 3000);
-
-        function start() {
-            index++;
-            $("#ul_imgs").animate({
-                'left': -$(".li_img").eq(0).width() * (index % len)
-            });
-            if (index % len == (len - 1)) {
-                $("#ul_imgs").animate({
-                    'left': 0
-                }, 0);
-                index++;
-            }
+    $(document).ready(function () {
+        var imagebox = $(".showbox").children('.imagebox')[0],
+            icobox = $(".showbox").children('.icobox')[0],
+            ico = $(icobox).children('span'),
+            imagenum = 10,
+            imageboxWidth = $(imagebox).width(),
+            imagewidth = imageboxWidth * imagenum,
+            activeID = parseInt($($(icobox).children(".active")[0]).attr("rel")),
+            nextID = 0,
+            intervalID,
+            delaytime = 4000,
+            speed = 700;
+        $(imagebox).css({
+            'width': imagewidth + "px"
+        });
+        var rotate = function (clickID) {
+            if (clickID + 1) {
+                nextID = clickID;
+            } else {
+                nextID = (activeID + 1) % 10;
+            };
+            $(ico[activeID]).removeClass('active');
+            $(ico[nextID]).addClass('active');
+            $(imagebox).animate({
+                'left': "-" + nextID * imageboxWidth + "px"
+            }, speed);
+            activeID = nextID;
         }
+
+        intervalID = setInterval(rotate, delaytime);
+
+        $.each(ico, function (index, val) {
+            $(this).click(function (event) {
+                clearInterval(intervalID);
+                var clickID = index;
+                rotate(clickID);
+                intervalID = setInterval(rotate, delaytime);
+            });
+        });
     });
 </script>
 
